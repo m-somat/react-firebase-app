@@ -18,7 +18,13 @@ class ListCities extends Component {
     isConnected: false,
     database: [],
     sortBy: "city",
+    cityColor: "black",
   };
+
+  constructor(props) {
+    super(props);
+    this.handleColorChange = this.handleColorChange.bind(this);
+  }
 
   componentDidMount = async () => {
     firebase
@@ -53,6 +59,7 @@ class ListCities extends Component {
           city: city.cityName,
           state: city.cityState,
           zip: city.cityZip,
+          color: this.state.cityColor,
           time: new Date().toLocaleTimeString(),
         };
         const joinedData = this.state.database.concat(data);
@@ -60,6 +67,7 @@ class ListCities extends Component {
 
         this.setState({
           database: joinedData,
+          cityColor: "black",
         });
       } catch (error) {
         console.error(error);
@@ -70,6 +78,11 @@ class ListCities extends Component {
   removeCity = (cityId) => {
     firebase.database().ref(cityId).remove();
   };
+
+  handleColorChange(color) {
+    console.log(color.hex);
+    this.setState({ cityColor: color.hex });
+  }
 
   render() {
     let list;
@@ -89,7 +102,11 @@ class ListCities extends Component {
     return (
       <div className="cities">
         <ul className="cities-list">
-          <InputCity onAddCity={this.addCity} />
+          <InputCity
+            onAddCity={this.addCity}
+            handleColorChange={this.handleColorChange}
+            color={this.state.cityColor}
+          />
 
           <Options
             num={this.state.database.length}
@@ -161,7 +178,7 @@ class City extends Component {
   render() {
     const data = this.props.database;
     return (
-      <li className="city-item">
+      <li className="city-item" style={{ color: `${data.color}` }}>
         <h3>{data.city}</h3>
         <p>{"State: " + data.state}</p>
         <p>{"Zip code: " + data.zip}</p>
