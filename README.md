@@ -6,6 +6,16 @@ You can add or remove cities in my Firebase database
 Here is a [live version](https://cities-react-firebase-app.netlify.app/) hosted on Netlify.
 <br><br>
 
+# NPM Packages
+[react-dom](https://www.npmjs.com/package/react-dom)<br>
+[sortby](https://www.npmjs.com/package/sortby)<br>
+[nano-id](https://www.npmjs.com/package/nano-id)<br>
+[react-color](https://www.npmjs.com/package/react-color)<br>
+[firebase](https://www.npmjs.com/package/firebase)<br>
+[form-serialize](https://www.npmjs.com/package/form-serialize)
+<br><br>
+
+
 # Usage
 ## Getting ready
 * Clone repository
