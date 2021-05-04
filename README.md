@@ -21,14 +21,14 @@ npm install
 <br><br>
 
 ## City Template
-```json
+```JSON
 {
     "id": {
-        "city": city name,
-        "color": item hex color,
-        "id": item id,
-        "time": publishing time,
-        "zip": zip code
+        "city": "city name",
+        "color": "item hex color",
+        "id": "item id",
+        "time": "publishing time",
+        "zip": "zip code"
     }
 }
 ```
