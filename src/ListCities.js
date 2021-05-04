@@ -17,7 +17,7 @@ class ListCities extends Component {
   state = {
     isConnected: false,
     database: [],
-    sortBy: "city",
+    sortBy: "-time",
     cityColor: "black",
   };
 
@@ -147,7 +147,6 @@ class Options extends Component {
             name="sort-filter"
             value="city"
             onClick={this.onSelectSort}
-            defaultChecked
           />
           <label htmlFor="city">City</label>
 
@@ -166,6 +165,7 @@ class Options extends Component {
             name="sort-filter"
             value="-time"
             onClick={this.onSelectSort}
+            defaultChecked
           />
           <label htmlFor="time">Date Added</label>
         </div>

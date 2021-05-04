@@ -18,6 +18,11 @@ npm install
 ```
 * Add your own "firebase.config.js" in the "src/" directory. It includes firebase API key for your react app.
 * Here are the steps to create your own [React Realtime Database](https://react-firebase-js.com/docs/react-firebase-realtime-database/getting-started)
+* Start the server on port 3000 using npm
+```
+npm start
+```
+make sure you're in the root directory before this step
 <br><br>
 
 ## City Template
