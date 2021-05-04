@@ -24,11 +24,11 @@ npm install
 ```json
 {
     "id": {
-        "city": String, //city name
-        "color": String, //item hex color
-        "id": String, //item id
-        "time": String, //publishing time
-        "zip": String, //zip code
+        "city": city name,
+        "color": item hex color,
+        "id": item id,
+        "time": publishing time,
+        "zip": zip code
     }
 }
 ```
