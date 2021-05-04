@@ -60,7 +60,7 @@ class ListCities extends Component {
           state: city.cityState,
           zip: city.cityZip,
           color: this.state.cityColor,
-          time: new Date().toLocaleTimeString(),
+          time: new Date().toLocaleString(),
         };
         const joinedData = this.state.database.concat(data);
         await firebase.database().ref(id).set(data);
